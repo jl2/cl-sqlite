@@ -38,7 +38,9 @@
 (define-foreign-library sqlite3-lib
   (:darwin (:default "libsqlite3"))
   (:unix (:or "libsqlite3.so.0" "libsqlite3.so"))
-  (t (:or (:default "libsqlite3") (:default "sqlite3") (:default "winsqlite3"))))
+
+  (t (:or (:default "libsqlite3") (:default "libsqlite3-0") (:default "sqlite3") (:default "sqlite3-0") (:default "winsqlite3"))))
+
 
 (use-foreign-library sqlite3-lib)
 
